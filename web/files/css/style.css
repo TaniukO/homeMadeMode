@@ -1,0 +1,378 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+ p, blockquote, pre,h1,h2,h2,h4,h5,h6,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+h1 {
+display: block;
+font-size: 2em;
+margin-before: 0.67em;
+margin-after: 0.67em;
+margin-start: 0;
+margin-end: 0;
+font-weight: bold; 
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font: 12px/18px Arial, sans-serif;
+
+}
+
+
+#siteBackgroundLowLaer1 {
+z-index:1;
+	width:100%;
+	background: url('/files/img/bgIndex.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-clip: border-box;
+height:100%;
+position:fixed; 
+}
+
+#siteBackgroundLowLaer2 {
+	z-index:2;
+	width:100%;
+	height:100%;
+	background: rgba(255, 208, 20, 0.25);
+	position:fixed; 
+}
+
+.wrapper {
+	width:	100%; 
+	
+}
+
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+position:relative;
+z-index:3;
+width:100%;
+	height: 90px;
+	background: rgba(76,175,80,0.75);
+}
+/*----------< nav >----------------------------------------
+*/
+
+#navLiFirst{
+margin-left:10%;
+}
+#navLiLast{
+float:right;
+margin-right:10%;
+}
+
+			@media screen and (max-width: 600px){
+			   nav ul li {
+			   float: none;
+			   }			   
+			   .left-sidebar{
+			   left:-250;
+			   }  
+			}
+
+
+nav ul {
+    background-color: #333333;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+ul.top li a {
+font: normal normal normal 24px/1.4em 'josefin slab',serif;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover:not(.active) {
+    background-color: #111;
+}
+
+#active {
+    background-color: rgba(76,175,80,0);/*#4CAF50;*/
+}
+
+
+
+/*---------< /////nav >--------------------------------------------
+*/
+
+
+
+#font_HeaderTitleH1 {
+	text-align: center; 
+	line-height: 0.9em;
+    font: normal normal normal 42px/1.4em 'josefin slab',serif;
+    color: #FFFFFF;
+	    text-decoration: none;
+		    display: block;
+	}
+	
+	#font_HeaderTitleH3 {
+margin-top:0px;
+	text-align: center; 
+	line-height: 0.5em;
+    font: normal normal normal 18px/1.4em 'josefin slab',serif;
+    color: #FFFFFF;
+	}
+.centerLayer {
+
+     position: fixed; 
+     
+     height: 100px; /* Высота слоя в процентах */
+     left: 50%; /* Положение слоя от левого края */
+     top: 10px; /* Положение слоя от верхнего края */
+     margin-left: -146px; /* Отступ слева */
+     margin-top: -5px; /* Отступ сверху */
+	 
+    }
+
+/* Middle
+-----------------------------------------------------------------------------*/
+
+.middle {
+	z-index:4;
+	position: relative;
+	padding:60px;
+}
+
+.middle:after {
+	content: '';
+}
+
+/* Left Sidebar
+-----------------------------------------------------------------------------*/
+.left-sidebar {
+z-index:5;
+	position: relative;
+	float: left;
+	left:-270px;
+	width: 270px;
+	margin-right:-270px;
+	    
+		animation-name: leftOut;
+		animation-duration: 0.7s;
+}
+.left-sidebar:hover {
+
+    -webkit-animation-name: leftIn;
+    -webkit-animation-duration: 0.3s;
+z-index:12;
+left:-70px;
+}
+@-webkit-keyframes leftIn {
+    0% { left:-270px;}
+    100% { left: -70px;}
+}
+@-webkit-keyframes leftOut {
+    0% { left:-70px;}
+    100% { left:-270px;}
+}
+#leftOpenSpan{padding:10px;
+text-align: center;
+display:inline-block;
+width:20px;
+font-size: 30px;
+    color: white;
+	font-family: "Times New Roman", Times, serif;
+	line-height: 0.8em;
+}
+
+aside.left-sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(51, 51, 51);
+}
+
+aside.left-sidebar ul li {
+    float: left;
+}
+
+aside.left-sidebar ul li a {
+font: normal normal normal 24px/1.4em 'josefin slab',serif;
+    display: block;
+		width:200px ;
+    color: white;
+    text-align: center;
+    padding: 0px 0px 0px 16px;
+    text-decoration: none;
+}
+aside.left-sidebar ul li a:hover {
+    background-color: #111;
+}
+
+
+
+
+/* Right Sidebar
+-----------------------------------------------------------------------------*/
+.right-sidebar {
+z-index:7;
+	position: relative;
+	float: right;
+	height:100%;
+	margin-right: 0px;
+	width: 250px;
+	margin-left:-250px;
+	background: rgba(225, 5, 5,0.5);
+}
+
+
+
+
+
+/*-----------< main >----------------------------------------------
+*/
+
+
+
+.containerOut {
+position:absolute;
+background-color: rgba(255,255,255,0.75);
+z-index:6;
+	width: 840px;
+	margin-left: -420px; 
+	left:50%;
+	padding:20px;
+	margin-bottom: 60px;
+	
+	-webkit-animation-name: welcomWraper;
+    -webkit-animation-duration: 7s;
+	
+	}
+	
+@-webkit-keyframes welcomWraper{
+0% {opacity: 0;}
+75% {opacity:0;}
+100% {opacity: 1;}
+}
+	
+.containerIn {
+border-width:3px;
+border-style: double;
+border-color:rgb(128, 165, 188);
+padding:20px;
+}
+
+.bWelcom{
+background-color: rgba(255,255,255,0.9);
+position:absolute;
+left:50%;
+top:40px;
+margin-left:-300px;
+width:600px;
+height:300px;
+padding: 20px;
+border-width:1px;
+border-style: solid;
+border-color:rgb(128, 165, 188);
+opacity:0;
+
+-webkit-animation-name: ANIMATbWelcome;
+-webkit-animation-duration: 7s;
+
+}
+
+@-webkit-keyframes ANIMATbWelcome{
+0% {opacity: 0;}
+25% {opacity: 1;}
+50% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+div.bWelcom h2{
+font-size: 50px;
+    color: #111;
+	font-family: "Times New Roman", Times, serif;
+	line-height: 1.6em;
+}
+div.bWelcom h3{
+font-size: 30px;
+    color: #AAAAAA;
+	font-family: "Times New Roman", Times, serif;
+	line-height: 1.6em;
+}
+
+
+
+.content {
+background-color:rgba(255,255,255,0.5);
+	padding: 20px;
+}
+
+
+
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+padding-top:3px;
+text-align:center;
+	z-index:8;
+	position:fixed;
+	top:100%;
+	width:100%;
+	margin-top:-22px;
+	height: 22px;
+	background: rgba(41,170,57,0.75);
+}
+
